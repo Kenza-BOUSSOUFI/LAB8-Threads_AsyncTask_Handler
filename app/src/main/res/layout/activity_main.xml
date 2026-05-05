@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_status_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="État : En attente"
+        android:textSize="18sp"
+        android:paddingBottom="12dp"
+        android:textColor="#333333"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar_task"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="0"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/image_viewer_main"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/ic_launcher"
+        android:contentDescription="Aperçu"/>
+
+    <Button
+        android:id="@+id/btn_thread_process"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Charger Image (Thread)"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#4CAF50"/>
+
+    <Button
+        android:id="@+id/btn_async_process"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calcul Lourd (AsyncTask)"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#2196F3"/>
+
+    <Button
+        android:id="@+id/btn_check_ui"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tester la Réactivité"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#FF9800"/>
+
+</LinearLayout>
